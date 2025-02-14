@@ -6,28 +6,41 @@
   - [Mục lục](#mục-lục)
   - [0. Ghi chú và thông tin thêm](#0-ghi-chú-và-thông-tin-thêm)
   - [1. Tổng quan về Kỹ nghệ yêu cầu dựa trên mô hình](#1-tổng-quan-về-kỹ-nghệ-yêu-cầu-dựa-trên-mô-hình)
-    - [Kỹ nghệ yêu cầu](#kỹ-nghệ-yêu-cầu)
-    - [Thế giới và Máy](#thế-giới-và-máy)
+    - [1.1. Khái niệm Kỹ nghệ yêu cầu](#11-khái-niệm-kỹ-nghệ-yêu-cầu)
+    - [1.2. Khái niệm Thế giới và Máy](#12-khái-niệm-thế-giới-và-máy)
       - [Mối quan tâm của Kỹ nghệ yêu cầu](#mối-quan-tâm-của-kỹ-nghệ-yêu-cầu)
-    - [Hệ thống hiện thời và Hệ thống mục tiêu](#hệ-thống-hiện-thời-và-hệ-thống-mục-tiêu)
-    - [Yêu cầu hệ thống và Yêu cầu phần mềm](#yêu-cầu-hệ-thống-và-yêu-cầu-phần-mềm)
+    - [1.3. Hệ thống hiện thời và Hệ thống mục tiêu](#13-hệ-thống-hiện-thời-và-hệ-thống-mục-tiêu)
+    - [1.4. Yêu cầu hệ thống và Yêu cầu phần mềm](#14-yêu-cầu-hệ-thống-và-yêu-cầu-phần-mềm)
       - [Mối quan tâm của KNYC](#mối-quan-tâm-của-knyc)
-    - [Kỹ nghệ yêu cầu trong quy trình phát triển phần mềm](#kỹ-nghệ-yêu-cầu-trong-quy-trình-phát-triển-phần-mềm)
-    - [Mô hình](#mô-hình)
+    - [1.5. Kỹ nghệ yêu cầu trong quy trình phát triển phần mềm](#15-kỹ-nghệ-yêu-cầu-trong-quy-trình-phát-triển-phần-mềm)
+    - [1.6. Mô hình](#16-mô-hình)
   - [2. Các loại Phát biểu và Yêu cầu](#2-các-loại-phát-biểu-và-yêu-cầu)
-    - [Các loại phát biểu](#các-loại-phát-biểu)
-      - [Phát biểu mô tả và Phát biểu mong muốn](#phát-biểu-mô-tả-và-phát-biểu-mong-muốn)
-      - [Yêu cầu hệ thống và Yêu cầu phần mềm dưới góc độ các phát biểu](#yêu-cầu-hệ-thống-và-yêu-cầu-phần-mềm-dưới-góc-độ-các-phát-biểu)
-      - [Thuộc tính miền, Giả định, Định nghĩa](#thuộc-tính-miền-giả-định-định-nghĩa)
-    - [Mô hình 4 biến M-C-I-O và Công thức thỏa mãn](#mô-hình-4-biến-m-c-i-o-và-công-thức-thỏa-mãn)
-    - [Các loại yêu cầu: Yêu cầu chức năng và Yêu cầu phi chức năng](#các-loại-yêu-cầu-yêu-cầu-chức-năng-và-yêu-cầu-phi-chức-năng)
+    - [2.1. Các loại phát biểu](#21-các-loại-phát-biểu)
+      - [2.1.1. Phát biểu mô tả và Phát biểu mong muốn](#211-phát-biểu-mô-tả-và-phát-biểu-mong-muốn)
+      - [2.1.2. Yêu cầu hệ thống và Yêu cầu phần mềm dưới góc độ các phát biểu](#212-yêu-cầu-hệ-thống-và-yêu-cầu-phần-mềm-dưới-góc-độ-các-phát-biểu)
+      - [2.1.3. Thuộc tính miền, Giả định, Định nghĩa](#213-thuộc-tính-miền-giả-định-định-nghĩa)
+      - [2.1.4 Mô hình 4 biến M-C-I-O và Công thức thỏa mãn](#214-mô-hình-4-biến-m-c-i-o-và-công-thức-thỏa-mãn)
+    - [2.2. Các loại yêu cầu: Yêu cầu chức năng và Yêu cầu phi chức năng](#22-các-loại-yêu-cầu-yêu-cầu-chức-năng-và-yêu-cầu-phi-chức-năng)
   - [3. Một số thông tin thêm về Kỹ nghệ yêu cầu](#3-một-số-thông-tin-thêm-về-kỹ-nghệ-yêu-cầu)
-    - [Quy trình Kỹ nghệ yêu cầu](#quy-trình-kỹ-nghệ-yêu-cầu)
-    - [Các phẩm chất nên có và những lỗi nên tránh](#các-phẩm-chất-nên-có-và-những-lỗi-nên-tránh)
-    - [Các loại dự án phần mềm](#các-loại-dự-án-phần-mềm)
-    - [Mối quan hệ giữa Kỹ nghệ yêu cầu và các lĩnh vực khác](#mối-quan-hệ-giữa-kỹ-nghệ-yêu-cầu-và-các-lĩnh-vực-khác)
-  - [Sơ lược về 6 loại mô hình KAOS](#sơ-lược-về-6-loại-mô-hình-kaos)
-    - [1. Mô hình mục tiêu](#1-mô-hình-mục-tiêu)
+    - [3.1. Tóm tắt về quy trình Kỹ nghệ yêu cầu](#31-tóm-tắt-về-quy-trình-kỹ-nghệ-yêu-cầu)
+    - [3.2. Các phẩm chất nên có và những lỗi nên tránh](#32-các-phẩm-chất-nên-có-và-những-lỗi-nên-tránh)
+    - [3.3. Các loại dự án phần mềm](#33-các-loại-dự-án-phần-mềm)
+    - [3.4. Mối quan hệ giữa Kỹ nghệ yêu cầu và các lĩnh vực khác](#34-mối-quan-hệ-giữa-kỹ-nghệ-yêu-cầu-và-các-lĩnh-vực-khác)
+  - [4. Quy trình kỹ nghệ yêu cầu](#4-quy-trình-kỹ-nghệ-yêu-cầu)
+  - [5. Tiến hóa yêu cầu](#5-tiến-hóa-yêu-cầu)
+    - [5.1. Góc độ không gian và thời gian của yêu cầu](#51-góc-độ-không-gian-và-thời-gian-của-yêu-cầu)
+  - [6. Kỹ nghệ yêu cầu hướng mục tiêu](#6-kỹ-nghệ-yêu-cầu-hướng-mục-tiêu)
+  - [7. Sơ lược về 6 loại mô hình KAOS](#7-sơ-lược-về-6-loại-mô-hình-kaos)
+    - [7.1. Mô hình mục tiêu](#71-mô-hình-mục-tiêu)
+    - [7.2. Mô hình trở ngại](#72-mô-hình-trở-ngại)
+    - [7.3. Mô hình tác tử/trách nhiệm](#73-mô-hình-tác-tửtrách-nhiệm)
+    - [7.4. Mô hình đối tượng](#74-mô-hình-đối-tượng)
+    - [7.5. Mô hình thao tác](#75-mô-hình-thao-tác)
+    - [7.6. Mô hình hành vi](#76-mô-hình-hành-vi)
+  - [8. Tích hợp đa góc nhìn hệ thống](#8-tích-hợp-đa-góc-nhìn-hệ-thống)
+  - [9. Phương pháp bán hình thức trong Kỹ nghệ yêu cầu](#9-phương-pháp-bán-hình-thức-trong-kỹ-nghệ-yêu-cầu)
+  - [10. Phương pháp hình thức trong Kỹ nghệ yêu cầu](#10-phương-pháp-hình-thức-trong-kỹ-nghệ-yêu-cầu)
+  - [11. Tổng kết](#11-tổng-kết)
 
 ## 0. Ghi chú và thông tin thêm
 
@@ -50,11 +63,11 @@
 
 ## 1. Tổng quan về Kỹ nghệ yêu cầu dựa trên mô hình
 
-### Kỹ nghệ yêu cầu
+### 1.1. Khái niệm Kỹ nghệ yêu cầu
 
 - **Kỹ nghệ yêu cầu** (tiếng Anh: Requirements Engineering - RE, viết tắt: KNYC): Là quá trình xác định, đánh giá, đặc tả, và thẩm định các yêu cầu của hệ thống.
 
-### Thế giới và Máy
+### 1.2. Khái niệm Thế giới và Máy
 
 - **Thế giới** (World) - hay gọi là **Thế giới vấn đề** (viết tắt: TGVD), là nơi nảy sinh các vấn đề cần giải quyết. TGVD có hai thành phần:
   - Thành phần con người: VD: nhân viên, quản lý, khách hàng, ...
@@ -79,7 +92,7 @@
   - TGVD có những giả định và thuộc tính nào?
   - Bên trong TGVD và Máy đều có những hiện tượng riêng và chung. **KNYC chỉ quan tâm đến các hiện tượng phía TGVD** (bao gồm các hiện tượng chung với Máy); ngược lại với Thiết kế phần mềm chỉ quan tâm đến các hiện tượng phía Máy.
 
-### Hệ thống hiện thời và Hệ thống mục tiêu
+### 1.3. Hệ thống hiện thời và Hệ thống mục tiêu
 
 - **Hệ thống** (tiếng Anh: System): Là một tập hợp các thành phần tương tác với nhau để thực hiện một hoặc nhiều mục tiêu cụ thể.
 
@@ -97,7 +110,7 @@
                     = Phần mềm mục tiêu + Môi trường (Con người, thiết bị, phần mềm khác, ...).
 ```
 
-### Yêu cầu hệ thống và Yêu cầu phần mềm
+### 1.4. Yêu cầu hệ thống và Yêu cầu phần mềm
 
 - **Yêu cầu hệ thống** (tiếng Anh: System Requirements, viết tắt: YCHT): Là các yêu cầu của hệ thống mục tiêu mà phải đáp ứng để giải quyết vấn đề của TGVD.
   - YCHT được định nghĩa dưới dạng hiện tượng của TGVD.
@@ -117,7 +130,7 @@
   - **WHO**: Ai sẽ chịu trách nhiệm cho các tác vụ mà hệ thống mới thực hiện/dịch vụ mà hệ thống mới cung cấp?
     - Đặt ra các bên liên quan, các vai trò, các quyền lợi và trách nhiệm, ...
 
-### Kỹ nghệ yêu cầu trong quy trình phát triển phần mềm
+### 1.5. Kỹ nghệ yêu cầu trong quy trình phát triển phần mềm
 
 - Với quy trình cơ bản: **Kỹ nghệ yêu cầu** -> **Thiết kế phần mềm** -> **Cài đặt phần mềm** -> **Tiến hóa phần mềm**.
 
@@ -126,7 +139,7 @@
   - KNYC cho kết quả là **Tài liệu yêu cầu** (tiếng Anh: Requirements Document - RD, viết tắt: TLYC). Đây là **chế tác** (tiếng Anh: Artifact) quan trọng nhất của KNYC - vì TLYC ảnh hưởng đến nhiều khía cạnh của dự án, cả về kỹ thuật (thiết kế, cài đặt, kiểm thử, ...) và phi kỹ thuật (quản lý dự án, quản lý chất lượng, hợp đồng, ...).
   - **Thay đổi** ở giai đoạn KNYC có **chi phí thấp nhất** và tăng cao hơn ở các giai đoạn sau. Vì vậy, việc đầu tư nhiều vào KNYC giúp **giảm thiểu rủi ro và chi phí** cho dự án.
 
-### Mô hình
+### 1.6. Mô hình
 
 - Môn học này tập trung vào **KNYC dựa trên mô hình** (Model-based RE - MBRE), tập trung vào **phương pháp KAOS** (tiếng Anh: Knowledge Acquisition in autOmated Specification hay Keep All Objectives Satisfied), một phương pháp **KNYC hướng mục tiêu** (tiếng Anh: Goal-oriented Requirements Engineering).
 
@@ -165,9 +178,9 @@
 
 ## 2. Các loại Phát biểu và Yêu cầu
 
-### Các loại phát biểu
+### 2.1. Các loại phát biểu
 
-#### Phát biểu mô tả và Phát biểu mong muốn
+#### 2.1.1. Phát biểu mô tả và Phát biểu mong muốn
 
 - **Phát biểu mô tả** (tiếng Anh: Descriptive statement, viết tắt: PBMT): Là phát biểu mô tả các tính chất có tính "luôn đúng" của hệ thống.
   - Thường là các hiện tượng tự nhiên, ràng buộc vật lý, ...
@@ -181,7 +194,7 @@
 
 - **Khác biệt quan trọng**: PBMT là "luôn đúng", còn PBMM là "cần đạt được". Do đó **không thể thay đổi hoặc điều chỉnh PBMT**, nhưng có thể thay đổi hoặc điều chỉnh PBMM.
 
-#### Yêu cầu hệ thống và Yêu cầu phần mềm dưới góc độ các phát biểu
+#### 2.1.2. Yêu cầu hệ thống và Yêu cầu phần mềm dưới góc độ các phát biểu
 
 - Từ công thức (1) ```Hệ thống = Phần mềm + Môi trường``` và (2) KNYC chỉ quan tâm đến các hiện tượng ở TGVD (tính cả hiện tượng chung với Máy).
   - Phát biểu trong KNYC có thể **liên hệ đến các hiện tượng** ở Môi trường, hoặc chung giữa Phần mềm và Môi trường.
@@ -198,7 +211,7 @@
 
 - **Yêu cầu phần mềm là yêu cầu hệ thống, nhưng ngược lại không đúng**.
 
-#### Thuộc tính miền, Giả định, Định nghĩa
+#### 2.1.3. Thuộc tính miền, Giả định, Định nghĩa
 
 - **Thuộc tính miền** (tiếng Anh: Domain property - DOM): Là PBMT về các **hiện tượng của TGVD**.
   - VD: `xeDangChay = true -> vanTocXe > 0`.
@@ -209,7 +222,7 @@
 - **Định nghĩa** (tiếng Anh: Definition - DEF): Là phát biểu cung cấp **khái niệm/thuật ngữ** và **không có tính đúng/sai**.
   - VD: `vanTocXe` là vận tốc thực tế của xe; `vanTocXeDoDuoc` là vận tốc đo được từ tốc kế của xe.
 
-### Mô hình 4 biến M-C-I-O và Công thức thỏa mãn
+#### 2.1.4 Mô hình 4 biến M-C-I-O và Công thức thỏa mãn
 
 - Môi trường --**Biến được giám sát M** (tiếng Anh: Monitored variable)--> Thiết bị đầu vào (VD: Cảm biến).
   - VD: `M = vanTocXe`.
@@ -231,7 +244,7 @@
   - $YCPM, ASM, DOM \models YCHT$.
   - Phát biểu: Nếu yêu cầu phần mềm, giả định, và thuộc tính miền đều thỏa mãn và và nhất quán (không có mâu thuẫn), thì yêu cầu hệ thống cũng được thỏa mãn.
 
-### Các loại yêu cầu: Yêu cầu chức năng và Yêu cầu phi chức năng
+### 2.2. Các loại yêu cầu: Yêu cầu chức năng và Yêu cầu phi chức năng
 
 - **Yêu cầu chức năng** (tiếng Anh: Functional requirement - FR, viết tắt: YCCN): Là yêu cầu mô tả **các chức năng mà hệ thống cần thực hiện**.
   - Mô tả các mong muốn về sự **ảnh hưởng của phần mềm lên môi trường**.
@@ -255,7 +268,7 @@
 
 ## 3. Một số thông tin thêm về Kỹ nghệ yêu cầu
 
-### Quy trình Kỹ nghệ yêu cầu
+### 3.1. Tóm tắt về quy trình Kỹ nghệ yêu cầu
 
 - Quy trình Kỹ nghệ yêu cầu gồm **4 bước** chính, không bắt buộc tuân theo thứ tự chặt chẽ (có thể từ bước trước quay về bước sau, hoặc trùng lặp giữa các bước, ...) và có tính lặp lại theo hình xoắn ốc (quay lại bước đầu sau khi xong bước cuối, nhưng để cải thiện thay vì bắt đầu lại từ đầu). Nội dung chi tiết của 4 bước này sẽ được đề cập trong phần [4. Quy trình Kỹ nghệ yêu cầu](#4-quy-trình-kỹ-nghệ-yêu-cầu).
   - **Hiểu miền vấn đề và xác định yêu cầu**.
@@ -280,7 +293,7 @@
     - Thực hiện **kiểm tra các phẩm chất** và **sửa lỗi** nếu có.
     - **Kết quả**: Tài liệu yêu cầu được củng cố (tiếng Anh: Consolidated Requirements Document), dữ liệu kiểm thử chấp nhận và bản mẫu (tiếng Anh: Prototype), kế hoạch phát triển và hợp đồng dự án.
 
-### Các phẩm chất nên có và những lỗi nên tránh
+### 3.2. Các phẩm chất nên có và những lỗi nên tránh
 
 - Một số **phẩm chất** mà các chế tác của KNYC nên có:
   - Hoàn thiện.
@@ -311,7 +324,7 @@
     - Khó thay đổi.
     - Không giải thích được vì sao lại có yêu cầu đó.
 
-### Các loại dự án phần mềm
+### 3.3. Các loại dự án phần mềm
 
 - Có thể kể đến một số cách chia dự án:
   - **Green field** và **Brown field**: Dự án **Green field** là dự án mới, không có hệ thống hiện tại, còn **Brown field** là dự án mở rộng hoặc cải tiến từ hệ thống hiện tại.
@@ -321,7 +334,7 @@
 
 - Loại dự án cũng **ảnh hưởng** đến việc thực hiện KNYC cũng như các giai đoạn khác trong quá trình phát triển phần mềm.
 
-### Mối quan hệ giữa Kỹ nghệ yêu cầu và các lĩnh vực khác
+### 3.4. Mối quan hệ giữa Kỹ nghệ yêu cầu và các lĩnh vực khác
 
 - Chủ yếu KNYC gắn với **Kỹ nghệ phần mềm** (tiếng Anh: Software Engineering - SE) hay Công nghệ phần mềm (viết tắt: CNPM), nhưng cũng có mối quan hệ với các lĩnh vực khác:
   - **Hiểu miền vấn đề và xác định yêu cầu**: Kỹ nghệ hệ thống, lý thuyết điều khiển, khoa học quản lý, tâm lý học hành vi, nhân chủng học, thu thập tri thức trong trí tuệ nhân tạo, ...
@@ -332,13 +345,110 @@
 
 ## 4. Quy trình kỹ nghệ yêu cầu
 
+- TODO: Nội dung phần này tạm thời chưa được cập nhật. Có thể tham khảo phần tóm tắt ở mục [3.1. Tóm tắt về quy trình Kỹ nghệ yêu cầu](#31-tóm-tắt-về-quy-trình-kỹ-nghệ-yêu-cầu).
+
 ## 5. Tiến hóa yêu cầu
+
+### 5.1. Góc độ không gian và thời gian của yêu cầu
+
+- Yêu cầu có thể được **tiến hóa theo hai chiều**:
+  - **Chiều không gian**: Gắn với Phiên bản biến thể (tiếng Anh: Variant) của hệ thống.
+    - **Biến thể**: Là phiên bản của hệ thống có một số yêu cầu khác nhau so với phiên bản gốc, nhằm **mở rộng/thu hẹp/thích nghi** hoặc tùy chỉnh hệ thống cho một mục đích cụ thể.
+    - Phản ánh sự tiến hóa theo **dòng sản phẩm** của hệ thống.
+  - **Chiều thời gian**: Gắn với Phiên bản sửa đổi (tiếng Anh: Revision) của hệ thống.
+    - **Sửa đổi**: Là phiên bản của hệ thống có sự **sửa lỗi/cải tiến** so với phiên bản gốc.
+    - Phản ánh sự tiến hóa theo **thời gian** của hệ thống.
+  
+- VD: Trong ngữ cảnh ứng dụng lập lịch cuộc họp, sự phát triển theo thời gian có thể hiểu là quá trình phát triển ứng dụng thông thường, còn sự phát triển theo không gian có thể hiểu là việc tùy chỉnh ứng dụng cho từng đối tượng cụ thể (VD: Phiên bản trả phí sẽ có nhiều chức năng hơn phiên bản miễn phí).
+
+### 5.2. Dự đoán thay đổi yêu cầu
+
+- **Tài liệu hóa** các dự đoán thay đổi sẽ hỗ trợ cho việc dự đoán thay đổi yêu cầu.
+  - Ở giai đoạn KNYC (giai đoạn trước khi bắt đầu phát triển hệ thống), việc tài liệu hóa sẽ hỗ trợ **ghi chép và truy vết**.
+  - Ở giai đoạn phát triển hệ thống, việc tài liệu hóa sẽ hỗ trợ **tham chiếu** các nội dung cần thiết.
+
+- **Phân loại yêu cầu** cũng giúp dự đoán thay đổi yêu cầu tốt hơn.
+  - Phân loại theo **thời gian**: Ổn định và Biến động (theo thời gian).
+  - Phân loại theo **không gian**: Chung và Đặc thù (theo từng biến thể).
+
+- Khi đã phân loại yêu cầu xong, thực hiện **xếp hạng** các yêu cầu theo tính **Ổn định** và tính **Chung**.
+  - **Tính năng ổn định** thường là tính năng xuất hiện trong mọi phiên bản hệ thống.
+  - **Yêu cầu chức năng thường ổn định hơn** yêu cầu phi chức năng.
+  - **Cần xem xét kỹ lưỡng** trong trường hợp có nhiều lựa chọn.
+
+### 5.3. Quản lý truy vết yêu cầu
+
+#### 5.3.1. Khả năng truy vết và Liên kết truy vết
+
+- **Khả năng truy vết** (tiếng Anh: Traceability) là khả năng xác định được "lịch sử", nguồn gốc của một đối tượng cụ thể, và mối quan hệ giữa đối tượng ấy và các đối tượng khác.
+  - VD: Trong bài toán quản lý nguồn gốc nông sản, khả năng truy vết giúp xác định được nguồn gốc của một món hàng cụ thể, từ đâu đến đâu, qua bao nhiêu bước, ...
+
+- Trong ngữ cảnh **quản lý truy vết yêu cầu**, một phần tử trong TLYC **có khả năng truy vết** được nếu ta có thể xác định:
+  - **Lý do**: Tại sao phần tử này tồn tại?
+  - **Nguồn gốc**: Từ phần tử nào mà có phần tử này?
+  - **Đích đến**: Phần tử này dẫn đến phần tử nào?
+
+- **Các kiểu liên kết truy vết**:
+  - **Truy vết tiến và lùi**: Mối quan hệ trước-sau giữa các phần tử.
+    - VD: Phần tử R1 dẫn đến R2 là truy vết tiến, còn R2 dẫn đến R1 là truy vết lùi.
+  - **Truy vết dọc và ngang**: Mối quan hệ giữa các tầng trừu tượng hóa.
+    - VD: Phần tử R1 nối đến R2 ở cùng tầng "Kiến trúc hệ thống" là truy vết ngang, còn nối đến R3 ở tầng "Mã nguồn".
+
+- **Các loại liên kết truy vết**:
+  - **Liên kết phụ thuộc** (tiếng Anh: Dependency link): Là kiểu liên kết truy vết chung nhất.
+    - **Liên kết liên phiên bản** (tiếng Anh: Inter-version link): Liên kết giữa các phiên bản khác nhau của hệ thống theo không gian/thời gian.
+      - **Liên kết biến thể**: VD: A2 mở rộng A1.
+      - **Liên kết sửa đổi**: VD: A2 sửa đổi A1.
+    - **Liên kết cùng phiên bản** (tiếng Anh: Intra-version link): Liên kết trong cùng một phiên bản của hệ thống.
+      - **Liên kết sử dụng**: VD: A2 sử dụng A1 thì việc sửa đổi A1 có khả năng ảnh hưởng xấu đến A2.
+      - **Liên kết dẫn xuất**: VD: A2 là dẫn xuất từ A1 thì A1 thỏa mãn điều kiện nào đó thì mới xây dựng được A2.
+
+#### 5.3.2. Quy trình Quản lý truy vết yêu cầu
+
+- Quy trình **Quản lý truy vết yêu cầu** gồm **4 bước** chính, có tính lặp lại:
+  - **Bước 1**: Định nghĩa **chính sách truy vết**.
+    - Xác định sự cân bằng giữa chi phí và lợi ích từ quản lý truy vết; xây dựng phạm vi, độ chi tiết, độ chính xác; phân công trách nhiệm.
+    - Bước này giúp duy trì sự **nhất quán** trong quy trình.
+  - **Bước 2**: **Tạo lập** các liên kết truy vết.
+    - Sử dụng công cụ tự động hóa; tích hợp liên kết từ giai đoạn đầu; khắc phục đa dạng nguồn và định dạng.
+    - Việc ứng dụng các công cụ sẽ giúp giảm chi phí và thời gian thực hiện.
+    - Bước này giúp **hình thành cơ sở của việc khai thác các liên kết truy vết** ở Bước 3.
+  - **Bước 3**: **Khai thác** các liên kết truy vết
+    - Phân tích tiến hóa, kiểm tra thay đổi, theo dõi lỗi.
+    - Bước này giúp **nâng cao chất lượng; giảm chi phí và thời gian truy ngược thông tin**.
+  - **Bước 4**: **Bảo trì** các liên kết truy vết.
+    - Cập nhật liên kết theo thay đổi; xử lý các trường hợp đặc biệt.
+    - Bước này giúp đảm bảo **truy xuất nguồn gốc và tính phù hợp** của các thành phần trong dự án.
+
+#### 5.3.3. Kỹ thuật hỗ trợ quản lý truy vết yêu cầu
+
+- TODO: Nội dung phần này tạm thời chưa được cập nhật đầy đủ.
+
+- Có thể kể đến một số kỹ thuật và công cụ như:
+  - Đồ thị và ma trận truy vết.
+  - Biểu đồ tính năng.
+  - Cơ sở dữ liệu truy vết.
+
+### 5.4. Quản lý thay đổi yêu cầu
+
+- TODO: Nội dung phần này tạm thời chưa được cập nhật đầy đủ.
+
+- Quy trình **Quản lý thay đổi yêu cầu** gồm **3 bước** chính, có tính lặp lại:
+  - Khởi tạo thay đổi.
+  - Đánh giá và xếp thứ tự ưu tiên cho thay đổi.
+  - Thống nhất thay đổi.
+
+### 5.5. Giám sát yêu cầu trong môi trường thực thi
+
+- TODO: Nội dung phần này tạm thời chưa được cập nhật.
 
 ## 6. Kỹ nghệ yêu cầu hướng mục tiêu
 
+- TODO: Nội dung phần này tạm thời chưa được cập nhật.
+
 ## 7. Sơ lược về 6 loại mô hình KAOS
 
-### 1. Mô hình mục tiêu
+### 7.1. Mô hình mục tiêu
 
 - **Mô hình mục tiêu** là trung tâm của KAOS, được biểu diễn dưới dạng **biểu đồ mục tiêu** (tiếng Anh: Goal diagram).
 
@@ -360,20 +470,38 @@
     - **Liên kết mâu thuẫn** (tiếng Anh: Conflict link): Thể hiện mâu thuẫn có thể xảy ra giữa các mục tiêu. Được biểu diễn bằng một đường thẳng nối hai mục tiêu, có tia sét ở giữa.
     - **Liên kết giao diện** (tiếng Anh: Interface link): Thể hiện sự liên kết giữa mục tiêu với các mô hình khác (Trở ngại - cản trở, Tác tử - chịu trách nhiệm, Đối tượng - quan tâm đến, Thao tác - thao tác hóa, Hành vi - bao phủ).
 
-### 2. Mô hình trở ngại
+### 7.2. Mô hình trở ngại
 
-### 3. Mô hình tác tử/trách nhiệm
+- TODO: Nội dung phần này tạm thời chưa được cập nhật.
 
-### 4. Mô hình đối tượng
+### 7.3. Mô hình tác tử/trách nhiệm
 
-### 5. Mô hình thao tác
+- TODO: Nội dung phần này tạm thời chưa được cập nhật.
 
-### 6. Mô hình hành vi
+### 7.4. Mô hình đối tượng
+
+- TODO: Nội dung phần này tạm thời chưa được cập nhật.
+
+### 7.5. Mô hình thao tác
+
+- TODO: Nội dung phần này tạm thời chưa được cập nhật.
+
+### 7.6. Mô hình hành vi
+
+- TODO: Nội dung phần này tạm thời chưa được cập nhật.
 
 ## 8. Tích hợp đa góc nhìn hệ thống
 
+- TODO: Nội dung phần này tạm thời chưa được cập nhật.
+
 ## 9. Phương pháp bán hình thức trong Kỹ nghệ yêu cầu
+
+- TODO: Nội dung phần này tạm thời chưa được cập nhật.
 
 ## 10. Phương pháp hình thức trong Kỹ nghệ yêu cầu
 
+- TODO: Nội dung phần này tạm thời chưa được cập nhật.
+
 ## 11. Tổng kết
+
+- TODO: Nội dung phần này tạm thời chưa được cập nhật.
